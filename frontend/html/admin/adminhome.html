@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="/home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4">SMASHBOOK | ADMINISTRATOR</span>
+              </a>
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="/home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/team" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="/reserve" class="nav-link">Reservation</a></li>
+                <li class="nav-item"><a href="/usermanage" class="nav-link">User Manage</a></li>
+                <li class="nav-item"><a href="/courtmanage" class="nav-link">Court Manage</a></li>
+                <button style="border: none; background-color: transparent;" onclick="doLogout()"><li class="nav-item"><a href="" class="nav-link active" aria-current="page">Logout</a></li></button>
+              </ul>
+            </header>
+          </div>
+        </nav>
+  
+
+        <div class="container">
+          <div class="p-5 text-center bg-body-tertiary rounded-3">
+            <svg class="bi mt-4 mb-3" style="color: var(--bs-indigo);" width="100" height="100"><use xlink:href="#bootstrap"></use></svg>
+            <h1 class="text-body-emphasis">ADMINISTRATOR</h1>
+            <p class="col-lg-8 mx-auto fs-5 text-muted">
+               For manage booking and manage user of smashbook badminton court.
+            </p>
+            <div class="d-inline-flex gap-2 mb-5">
+              <a href="/courtmanage">
+              <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-3 rounded-pill" type="button">
+                   RESERVATION
+                <svg class="bi ms-2" width="24" height="24"><use xlink:href="#arrow-right-short"></use></svg>
+              </button></a>
+
+              <a href="/usermanage">
+              <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-5 rounded-pill" type="button">
+                  USER MANAGEMENT
+                <svg class="bi ms-2" width="24" height="24"><use xlink:href="#arrow-right-short"></use></svg>
+              </button></a>
+            </div>
+          </div>
+        </div>
+    
+    <footer>
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                  <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                      <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                    <span class="mb-3 mb-md-0 text-body-secondary" style="align-items: center;">© 2024, IT999 Co.,Ltd.</span>
+                  </div>
+                </footer>
+              </div>
+    </footer>
+    <script src="updateNavLogin.js"></script>
+</body>
+</html>

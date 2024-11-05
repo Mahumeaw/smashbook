@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/css/Admin.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font.css">
+    <script src="https://kit.fontawesome.com/4bb19d571f.js"></script>
+</head>
+
+<body>
+    <div class="admin-img">
+        <img   src="svg/login.svg" alt="">
+    </div>
+    <button id="backButton"><i class="fas fa-solid fa-circle-arrow-left"></i></button>
+    <section class="login">
+        <h1>SMASHBOOK</h1>
+        <h4>Admin login</h4>
+    <form class="login-form" action="/login-post" method="post">
+        <i id="User-icon" class="fa-solid fa-user"></i>
+        <label class="Usernamelabel">Username</label><br/>
+        <input type="text" class="input-username form-control" id="username" placeholder="name@example.com" name="username"><br/>
+        <i id="Key-icon" class="fa-solid fa-key"></i>
+        <label class="Passwordlabel">Password</label><br/>
+        <input type="password" class="input-password form-control" id="password" placeholder="Password" name="password"><br/>
+        <input class="check-box" type="checkbox" value="remember-me"><label class="checkboxlabel"> Remember Me (Not implement yet) </label> <br/>
+        <button class="login-butt" type="submit">Login</button>  
+    </form>
+    </section>
+    <script src="/bootstrap.min.js"></script>
+    <script src="apiAddress.js"></script>
+    <script>
+        document.getElementById('backButton').addEventListener('click', function() {
+        if (document.referrer && document.referrer !== window.location.href)
+        {
+            window.location.href = document.referrer;
+        } 
+        else 
+        {
+            window.location.href = '/home'; // Redirect to home if previous page is the same or if there's no referrer
+        }
+    });
+
+    </script>
+</body>
+</html>

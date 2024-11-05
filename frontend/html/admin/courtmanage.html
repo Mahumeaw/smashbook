@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4">SMASHBOOK | ADMINISTRATOR</span>
+              </a>
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="/home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/team" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="/reserve" class="nav-link">Reservation</a></li>
+                <li class="nav-item"><a href="/usermanage" class="nav-link">User Manage</a></li>
+                <li class="nav-item"><a href="/courtmanage" class="nav-link active" aria-current="page">Court Manage</a></li>
+                <button style="border: none; background-color: transparent;" onclick="doLogout()"><li class="nav-item"><a href="" class="nav-link">Logout</a></li></button>
+              </ul>
+            </header>
+          </div>
+        </nav>
+
+        <div>
+            <br>
+            <h2 style="text-align: center;" > COURT MANAGEMENT</h2>
+        </div>
+
+        <div class="container">
+          <div style="text-align: right;">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#filtermodal">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16"> 
+                <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"></path>
+                 </svg>Filter</button>
+
+            
+            
+        </div>
+      </div>
+        <div class="container">
+            <table class="table table-striped table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col">#Id</th>
+                    <th scope="col">Customer</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Starttime</th>
+                    <th scope="col">Endtime</th>
+                    <th scope="col">#Court</th>
+                    <th scope="col">Action
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="addtable">
+                  <!-- <tr>
+                    <td>1</td>
+                    <td>Nakarin P</td>
+                    <td>2024-03-28</td>
+                    <td>16:00</td>
+                    <td>19:00</td>
+                    <td>6</td>
+                    <td>
+                        <button type="button" class="btn btn-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Delete</button>
+                        <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Update</button>
+                    </td>
+                  </tr>
+                    <td>2</td>
+                    <td>Punnut G</td>
+                    <td>2024-03-28</td>
+                    <td>16:00</td>
+                    <td>19:00</td>
+                    <td>7</td>
+                    <td>
+                        <button type="button" class="btn btn-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Delete</button>
+                        <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Update</button>
+                    </td>
+                 </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Customer" id="username"></td>
+                        <td><input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Date" id="date"></td>
+                        <td><input type="time" class="form-control" id="exampleFormControlInput1" placeholder="Starttime" id="starttime"></td>
+                        <td><input type="time" class="form-control" id="exampleFormControlInput1" placeholder="Endtime" id="endtime"></td>
+                        <td>
+                            <select class="form-select" aria-label="Court no" id="courtno">
+                                <option selected>#Court</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-success" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .7rem; --bs-btn-font-size: .8rem;">Add Slot</button>
+                        </td>
+                      </tr> -->
+                </tbody>
+              </table>
+              <div id="errorMessage"></div>
+        </div>
+
+        <!-- delete modal -->
+        <div class="modal fade" id="deletemodal" tabindex="-1" aria-labelledby="deletemodal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Delete Slot</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="deletemodalbody">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-danger" onclick="deleteSlot()">Delete</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Update Modal -->
+    <div class="modal fade" id="updatemodal" tabindex="-1" aria-labelledby="updatemodal" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Update Slot</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+                <div class="modal-body" id="modalUpdate">
+                    <h5 id="updatemodalId"></h5>
+                    <br>
+                    <label for="modelusernameupdate">Customer: </label>
+                    <input type="text" class="form-control" id="modelusernameupdate" placeholder="Username">
+                    <br>
+                    <label for="modaldateupdate">Date: </label>
+                    <input type="date" class="form-control" id="modaldateupdate" placeholder="Password">
+                    <br>
+                    <label for="modelstarttimeupdate">Starttime: </label>
+                    <input type="time" class="form-control" id="modelstarttimeupdate" placeholder="Username">
+                    <br>
+                    <label for="modelendtimeupdate">Endtime: </label>
+                    <input type="time" class="form-control" id="modelendtimeupdate" placeholder="Username">
+                    <br>
+                    <label for="modelcourtnoupdate">Court: </label>
+                    <select class="form-select" aria-label="Court no" id="modelcourtnoupdate">
+                        <option selected value="">#Court</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <br>
+                    <p>No need to fill if you don't want to make changes.</p>
+                    <div id="errorModalMessage"></div>
+                </div>
+
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="updateUser()">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Filter Modal -->
+    <div class="modal fade" id="filtermodal" tabindex="-1" aria-labelledby="filtermodal" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Filter</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+              <div class="modal-body" id="modalUpdate">
+                  <!-- <h5 id="updatemodalId"></h5> -->
+                  <!-- <br> -->
+                  <label for="modelusernamefilter">Customer: </label>
+                  <input type="text" class="form-control" id="modelusernamefilter" placeholder="Username">
+                  <br>
+                  <label for="modaldatefilter">Date: <button type="button" onclick="filterAutoToday()" class="btn btn-outline-dark btn-sm" style="--bs-btn-padding-y: .1rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .6rem;">Today</button></label>
+                  <input type="date" class="form-control" id="modaldatefilter">
+                  
+                  <br>
+                  <!-- <label for="modelcourtnofilter">Court: </label>
+                  <select class="form-select" aria-label="Court no" id="modelcourtnofilter">
+                      <option selected value="">#Court</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                  </select> -->
+                  
+                  <p>For filter only data that you want</p>
+                  <div id="errorModalMessage2"></div>
+              </div>
+
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-danger" onclick= "filterSlotClear()" data-bs-dismiss="modal"> Clear </button>
+          <button type="button" class="btn btn-primary" onclick="filterSlot()">Filter changes</button>
+          </div>
+      </div>
+      </div>
+  </div>
+
+    
+    <footer>
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                  <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                      <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                    <span class="mb-3 mb-md-0 text-body-secondary" style="align-items: center;">© 2024, IT999 Co.,Ltd.</span>
+                  </div>
+                </footer>
+              </div>
+    </footer>
+    <script src="courtmanageFunction.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="courtmanageFilterFunction.js"></script>
+    <script src="apiAddress.js"></script>
+    <script>      
+        reloadTable()
+    </script>
+    <script src="updateNavLogin.js"></script>
+</body>
+</html>

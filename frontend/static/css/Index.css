@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+ 
+body {
+    background-color: white;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+.Start-bg img{
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    z-index: 0;
+}
+
+.start-text{
+    position: absolute;
+    width: auto;
+    height: 15vw;
+    z-index: 1;
+    top: 15vw;
+    left: 7vw;
+    font-family: kanit;
+    color: white;
+}
+
+.start-text p{
+    font-size: 1.5vw;
+    font-weight: 200;
+
+}
+
+.start-text h3{
+    font-size: 2vw;
+    font-weight: 400;
+}
+
+.start-text h1{
+    font-size: 6.5vw;
+    font-weight: 600;
+}
+
+.start-text button{
+    width: 20vw;
+    height: 4vw;
+    border-radius: 50vw;
+    margin-top: 2.5vw;
+
+}
+
+.start-text button a{
+    color: #051846;
+    font-size: 1.5vw;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: kanit;
+}
+.admin-img img{
+    width: 100vw;
+    bottom: 0;
+    position: absolute;
+    z-index: 0;
+}
+.login{
+    position: absolute;
+    z-index: 1;
+    width: 35vw;
+    height: 38vw;
+    border: 0.2vw solid #D9D9D9;
+    right: 3.5vw;
+    border-radius: 3vw;
+    top: 5vw;
+}
+
+.login h1{
+    position: relative;
+    top: 1vw;
+    text-align: center;
+    font-family: kanit;
+    color: white;
+    font-size: 4vw;
+}
+.login h4{
+    top: 0;
+    position: relative;
+    left: 22vw;
+    font-family: kanit;
+    color: white;
+    font-size: 1.3vw;
+    font-weight: 500;
+}

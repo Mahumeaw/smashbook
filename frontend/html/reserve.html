@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+    <link rel="stylesheet" href="/css/ReserveStyle.css">
+    <script src="https://kit.fontawesome.com/4bb19d571f.js"></script>
+    <link rel="stylesheet" href="/css/font.css">
+</head>
+<body>
+    <div class="background-rectangle"></div>
+    <div class="navpic">
+        <img src="svg/nav.svg" alt="">
+            </div>
+        <header class="headerr">
+            <a href="#" class="space"></a>
+            
+            <nav class="navbarr">
+                    <a class="Home" href="/home">Home</a>
+                    <a class="team" href="/team">Team</a>
+                    <a class="active"href="/reserve">Reservation</a>
+                    <a class="Admin"href="/usermanage"style="display: none;" id="loginUser">User Manage</a>
+                    <a class="Admin"href="/courtmanage" style="display: none;" id="loginCourt">Court Manage</a>
+                    <button onclick="doLogout()" style="border: none; background: transparent;"><a class="Admin"href="" style="display: none;" id="loginLogout">Logout</a></button>
+                    <a class="Admin"href="/admin" style="display: flex;" id="loginLogin">Login</a>
+
+                    <div style="display: flex;" id="loginSearch">
+                        <input class="searhinput" type="text" placeholder="search anything" id="q">
+                        <button class="magnifying" type="submit"><img src="/svg/Search.svg" alt=""></button>
+                    </div>
+            </nav>
+        </header>
+        <div class="help">HOW CAN WE HELP YOU?</div>
+        <section class="reserv-from">
+            <label id="reserv-itemcol" class="reserv-name">Username</label><br>
+            <input id="username" class="input-name"type="text" placeholder="Enter your username"><br>
+            <label id="reserv-itemcol"class="reserv-date">Date</label>
+            <label id="reserv-itemcol"  class="reserv-start">Start time</label>
+            <label id="reserv-itemcol" class="reserv-end">End time</label><br>
+            <input id="date" class="input-date"type="date" placeholder="Select date">
+            
+            <input id="starttime" class="input-start"type="time">
+            
+            <input  id="endtime"class="input-end"type="time" ><br>
+            <label id="reserv-itemcol" class="reserv-court" >Court</label><br>
+            <select class="input-court" id="courtno">
+                <option value="">--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select><br>
+              <button id="reserv-itemcol" class="search-submit" onclick="searchGet()">search</button>
+              <button id="reserv-itemcol" class="Clear-info" onclick="clearButton()">clear</button>
+            
+        </section>
+        <div class="scroll-bg">
+            <div class="scroll-div">
+                <div class="scroll-object">
+
+                    <div class="Row-card" id="cardContainer"> 
+                        <div class="col-card">
+                            <img src="img/court.png" alt="">
+                            <div class="courtnumres">Court #1</div>
+                            <h6>22 APRIL 2024</h6>
+                            <h1>NAKARIN P</h1>
+                            <h2 class="st-time">16.15</h2> 
+                            <h2 class="end-time">17.15</h2>
+                            <button id="see-detail" type="submit">Click for details</button>
+                        </div>
+                        <div class="col-card">
+                            <img src="img/court.png" alt="">
+                            <div class="courtnumres">Court #1</div>
+                            <h6>22 APRIL 2024</h6>
+                            <h1>NAKARIN P</h1>
+                            <h2 class="st-time">16.15</h2> 
+                            <h2 class="end-time">17.15</h2>
+                            <button id="see-detail" type="submit">Click for details</button>
+                        </div>
+                        
+                </div>
+            </div>
+        </div>
+        </div>
+            
+        
+        
+<div class="reservbg"></div>
+        
+        <footer class="SMASHBOOK-footer">
+            <div class="SMASHBOOK-customrow">
+                <div class="SMASHBOOK-customcol">
+                    <div class="SMASHBOOK-footlogo">SMASHBOOK</div>
+                        <div class="para"><p>Follow our company social media to get more detail and information 
+                        about upcoming contents. Press the bell icon to get immediate
+                    notification of lastest contents.</p></div>
+                </div>
+                <div class="SMASHBOOK-customcol">
+                    <div class="colhead">Office</div>
+                    <div class="para">
+                    <p>Faculty of ICT, Mahidol University</p>
+                    <p>999 Phuttamonthon 4 Road,</p>
+                    <p>Salaya , Nakhon Pathom</p>
+                    <p>73170 THAILAND</p>
+                    <p class="email-id">IT999company@outlook.com</p></div>
+                    
+                </div>
+                <div class="SMASHBOOK-customcol">
+                    <div class="colhead">Links</div>
+                    <ul class="idontwantlist">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Team</a></li>
+                        <li><a href="">Reservation</a></li>
+                        <li><a href="">Admin</a></li>
+
+                    </ul>
+                </div>
+                <div class="SMASHBOOK-customcol">
+                    <div class="colhead">Newsletter</div>
+                    <form class="eform">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input class="emailbox" type="email" placeholder="Enter Your email" required id="">
+                        <button calss="email-submit" type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                    <div class="social-icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-square-x-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+        
+        <script src="guestsearchFunction.js"></script>
+        <script src="apiAddress.js"></script>
+        <script>
+            // document.getElementById('username').value = "";
+            // document.getElementById('date').value = "";
+            // document.getElementById('starttime').value = "";
+            // document.getElementById('endtime').value = "";
+            // document.getElementById('courtno').value = "";
+            document.getElementById("cardContainer").innerHTML = "";
+        </script>
+        <script src="updateNavLogin.js"></script>
+    
+</body>
+
+</html>

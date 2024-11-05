@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4">SMASHBOOK | ADMINISTRATOR</span>
+              </a>
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="/home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/team" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="/reserve" class="nav-link">Reservation</a></li>
+                <li class="nav-item"><a href="/usermanage" class="nav-link active" aria-current="page">User Manage</a></li>
+                <li class="nav-item"><a href="/courtmanage" class="nav-link">Court Manage</a></li>
+                <button style="border: none; background-color: transparent;" onclick="doLogout()"><li class="nav-item"><a href="" class="nav-link">Logout</a></li></button>
+  
+              </ul>
+            </header>
+          </div>
+        </nav>
+
+        <div>
+            <br>
+            <h2 style="text-align: center;" > USER MANAGEMENT</h2>
+            <br>
+        </div>
+
+    <div class="container">
+        <table class="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Password</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="addtable">
+              <tr>
+                <td>SERVER ERROR</td>
+                <td>SERVER ERROR</td>
+                <td>
+                    <button type="button" class="btn btn-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Delete</button>
+                    <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Update</button>
+                </td>
+              </tr>
+
+                <td>SERVER ERROR</td>
+                <td>SERVER ERROR</td>
+                <td>
+                    <button type="button" class="btn btn-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Delete</button>
+                    <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Update</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username"></td>
+                <td><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Password"></td>
+                <td>
+                    <button type="button" class="btn btn-success" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .7rem; --bs-btn-font-size: .8rem;"> Add User</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="errorMessage"></div>
+    </div>
+    
+    <!-- Update Modal -->
+    <div class="modal fade" id="updatemodal" tabindex="-1" aria-labelledby="updatemodal" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Update User</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+                <div class="modal-body" id="modalUpdate">
+                    <h5 id="updatemodalUsername"></h5>
+                    <br>
+                    <label for="modalusernameupdate">Username: </label>
+                    <input type="text" class="form-control" id="modelusernameupdate" placeholder="Username">
+                    <br>
+                    <label for="modalpasswordupdate">Password: </label>
+                    <input type="text" class="form-control" id="modalpasswordupdate" placeholder="Password">
+                    <br>
+                    <p>No need to fill if you don't want to make changes.</p>
+                    <div id="errorModalMessage"></div>
+                </div>
+
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="updateUser()">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deletemodal" tabindex="-1" aria-labelledby="deletemodal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="deletemodalbody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" onclick="deleteUser()">Delete</button>
+      </div>
+    </div>
+  </div>
+    </div>
+        
+    
+    <footer>
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                  <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                      <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                    <span class="mb-3 mb-md-0 text-body-secondary" style="align-items: center;">© 2024, IT999 Co.,Ltd.</span>
+                  </div>
+                </footer>
+              </div>
+    </footer>
+
+    <script src="usermanageFunction.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="apiAddress.js"></script>
+    <script>      
+        reloadTable();
+    </script>
+    <script src="updateNavLogin.js"></script>
+</body>
+</html>

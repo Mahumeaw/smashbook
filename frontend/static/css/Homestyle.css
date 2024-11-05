@@ -1,0 +1,451 @@
+:root {
+    --min-border: 1px solid black;
+    --pref-border: 0.25vw solid black;
+    --max-border: 2px solid black;
+    --box-width: 7.5vw; 
+    --box-height: 2.5vw;
+  }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+ 
+body {
+    background-color: white;
+    min-height: 100vh;
+    position: relative;
+}
+/* navbar*/
+.logoo {
+    z-index: 3;
+    position: absolute;
+    font-family: kanit;
+    color: white;
+    font-size: 3vw;
+    left: 12vw;
+    top: 2vw;
+
+}
+.navpic img, .pic img {
+    
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.navpic img{
+    filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.4));
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+
+}
+.headerr{
+    position: fixed;
+    z-index: 3;
+    width: 100vw;
+    background-color: transparent; 
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+       
+}
+
+.navbarr {
+    position: relative;
+    display: flex;
+    margin-right: 2.5vw;
+
+    
+}
+.pic img {
+    width: 96vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 2%;
+    z-index: 1;
+    margin-top: 2.42%;
+    filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.4));
+    
+}
+.space {
+    font-size: clamp(4px,2.5vw,50px);
+    font-weight: bold;
+    font-family: kanit;
+    text-decoration: none;
+    margin-left: 9%;
+    margin-top: 2.3%;
+    color: transparent;
+  
+}
+.navbarr a{
+    font-size: clamp(2.5px,1vw,19px);
+    font-family: kanit;
+    text-decoration: none;
+    margin-top: 2.8vw;
+    margin-right: 2%;
+    background-color: white;
+    border: var(--pref-border);
+    border-radius: 28px;
+    color: black;
+    align-items: center;
+    width: var(--box-width);
+    height: var(--box-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    
+    
+}
+
+.navbarr a:is(:link,:active,:visited).active{
+    color: white;
+    background-color: black;
+}
+
+.navbarr a:is(:link){
+    
+    color: white;
+    background-color: black;
+    
+}
+.navbarr a:hover{
+    color: white;
+    background-color: black;
+    transition: 0.5s;
+}
+
+
+.background-rectangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6vw;
+    background-color: #112558;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+ 
+}
+.biganno{
+    margin-top: 29.5%;         
+    position: absolute;
+    background: linear-gradient(to bottom, #030620,#1b257e );
+    margin-left: 2%;
+    height: 32vw;
+    width: 61.4vw;
+    border-radius: 0.75vw 0.75vw 0.75vw 0.75vw;
+    border-collapse: collapse;
+    filter: drop-shadow(0 5px 8px rgba(232, 232, 232, 0.4));
+    font-size: 0.8vw;
+    overflow: hidden;
+    font-family: kanit;
+    box-shadow: 0 1px 10px rgba(55, 55, 55, 0.76);
+}
+
+
+
+.bigvontent{
+    position: absolute;
+    height: 40vw;
+    width: 26.5vw;
+    background-color: #030d43;
+    background: linear-gradient(to bottom, #030d43, #23297c);
+    z-index: 6;
+    top: 0;
+    right: 0;
+}
+.table-content {
+    margin-top: 29.5%;         
+    position: absolute;
+    background: linear-gradient(to bottom, #FFFFFF, #E6E7F6);
+    margin-left: 2%;
+    height: 38vw;
+    width: 61.4vw;
+    border-radius: 0.75vw 0.75vw 0.75vw 0.75vw;
+    border-collapse: collapse;
+    filter: drop-shadow(0 5px 8px rgba(168, 168, 168, 0.4));
+    font-size: 0.8vw;
+    overflow: hidden;
+    font-family: kanit;
+}
+.anobg {
+    background: linear-gradient(to bottom, #030625,#121b7a );
+    color: transparent;
+    position: absolute; 
+    top: 36.5vw;
+    left: 65vw;
+    width: 33vw; 
+    height: 5vw;
+    right: 2vw;
+    z-index: 0;
+    border-radius: 0.75vw 0.75vw 0 0;
+    box-shadow: 0 5px 8px rgba(168, 168, 168, 0.4);
+    
+}
+.ano {
+    z-index: 2;
+    position: absolute;
+    font-family: kanit;
+    color: white;
+    font-size: 2vw;
+    left: 67.5vw;
+    top: 37.5vw;
+    font-weight: 700;
+    
+
+}
+
+
+
+input.searhinput {
+    position: relative;
+    background-color: rgba(22, 48, 115, 0.2);
+    width: 25vw;
+    height: var(--box-height);
+    padding: 0.5vw;
+    border-radius: 28px;
+    margin-top: 2.8vw;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4) inset;
+    border: none;
+    text-align: left;
+    font-family: kanit;
+    font-weight: 300;
+}
+button.magnifying img{
+    height: 70%;
+    width: 70%; 
+    margin-top: 10%;
+    position: absolute;
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+
+}
+button.magnifying {
+    position: absolute;
+    margin-top: 5.6%; 
+    right: 0; 
+    background-color: rgba(22, 48, 115, 0.2);
+    border: none;
+    border-radius: 50%;
+    height: 1.8vw; 
+    width: 1.8vw; 
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    margin-right: 0.5vw;
+}
+
+input.searhinput::placeholder {
+    font-size: clamp(4px, 1vw, 16px);
+    position: absolute; 
+    top: 50%; 
+    left: 20%; 
+    transform: translate(-50%, -50%); color: rgb(124, 124, 124);
+
+}
+.bg {
+    position: relative;
+    width: 100%;
+    min-height: 65vw;
+    padding: 20px 0;
+    top: 0;
+    z-index: 1; 
+    color: transparent;
+
+}
+.biganno img{
+    position: relative;
+    width: 35vw;
+    height: vw;
+    z-index: 5;
+}
+.biganno h2{
+    position: absolute;
+    top: 0;
+    z-index: 6;
+    color: white;
+    left: 37vw;
+    font-size: 3vw;
+    font-weight: 600;
+    top: 0.5vw;
+    letter-spacing: 0.15vw;
+    text-shadow: 0 2px 15px rgb(60, 86, 178);
+
+}
+
+
+.bigvontent p{
+    color: white;
+    top: 6vw;
+    position: relative;
+    margin: 0 2.3vw;
+    font-size: 0.7vw;
+}
+
+
+.SMASHBOOK-footer {
+    background: linear-gradient(to bottom, #030620,#2834a0 );
+    color: white;
+    padding: 3% 0 5% 2%;; 
+    position: relative; 
+    bottom: 0; 
+
+    width: 100vw; 
+    height: 20vw;
+    z-index: 0;
+    line-height: 1vw;
+    font-family: kanit;
+    
+}
+.SMASHBOOK-customrow {
+    position: absolute;
+    width: 85vw;
+    margin: 2vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.SMASHBOOK-customcol{
+    font-weight: 300;
+    font-size: 0.7vw;
+    flex-basis: 50%;
+    padding: 1.5vw;
+    margin-right: 4vw;
+
+}
+.SMASHBOOK-footlogo{
+    font-size: 2.5vw;
+    margin-bottom: 2vw;
+    text-shadow: 0 4px 4px rgba(255, 255, 255, 0.137);
+    font-weight: bold;
+
+
+}.colhead {
+    width: fit-content;
+    margin-bottom: 2vw;
+    top: 2vw;
+    font-weight: 400;
+    list-style: none;
+    font-size: 1vw;
+    
+}
+.idontwantlist {
+    list-style: none;
+
+}
+.idontwantlist li{
+    margin-bottom: 0.5vw;
+}
+
+.idontwantlist a{
+    color: white;
+    text-decoration: none;
+
+}
+
+
+.eform {
+    padding: 0.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid white;
+
+}
+.eform .fa-regular{
+    font-size: 2vw;
+    margin-right: 1vw;
+
+}
+.eform input.emailbox {
+    width: 15vw;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+    font-size: 1vw;
+}
+
+.eform button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    color: white;
+}
+.eform button .fa-solid{
+    font-size: 1vw;
+}
+
+.social-icons .fa-brands {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.5vw;
+    font-size: 1.5vw;
+    color: #121b7a;
+    margin-right: 1.5vw;
+    cursor: pointer;
+    background-color: white;
+    position: relative;
+    top: 1vw;
+   
+}
+.about-us-pic svg{
+    width: 100vw;
+    position: absolute;
+    height: auto;
+    z-index: -1;
+    top: 4vw;
+    
+    box-shadow: 0 1px 15px rgba(33, 89, 201, 0.508);
+}
+.abtext a{
+    z-index: 2;
+    position: absolute;
+    color: white;
+    top: 12vw;
+    font-size: 5vw;
+    font-family: kanit;
+    font-weight: 600;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    left: 37.5vw;
+    text-shadow: 0px 5px 9px rgba(88, 131, 218, 0.567);
+}
+#map {
+    top: 41.5vw;
+    left: 65vw;
+    width: 33vw; 
+    height: 20vw;
+    right: 2vw;/* Adjust the width as needed */
+    position: absolute;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    
+}
+.mapshadow {
+    background-color: transparent;
+    color: transparent;
+    position: absolute; 
+    top: 36.5vw;
+    left: 65vw;
+    width: 33vw; 
+    height: 24.7vw;
+    right: 2vw;
+    z-index: 0;
+    border-radius: 0.75vw 0.75vw 0.75vw 0.75vw;
+    box-shadow: 0 1px 10px rgba(55, 55, 55, 0.76);
+}
