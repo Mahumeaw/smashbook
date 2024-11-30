@@ -134,8 +134,7 @@ handleDisconnect();
 // ============== MIDDLE WARE ===============
 app.use((req, res, next) => {       // CORS SETUP
     res.setHeader('Access-Control-Allow-Credentials', true);
-    res.setHeader('Access-Control-Allow-Origin', process.env.CLIENT_DOMAIN);   
-    //res.setHeader('Access-Control-Allow-Origin', 'http://210.246.215.29:3000');
+    res.setHeader('Access-Control-Allow-Origin', process.env.CLIENT_DOMAIN);  
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT ,DELETE, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, token');
     if (req.method === 'OPTIONS') {
